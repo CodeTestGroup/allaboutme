@@ -62,7 +62,6 @@ body {
 }
 
 
-
 .menuitem:hover {
     color: #ffffff;
 }
@@ -84,21 +83,61 @@ a:hover {
 
 </style>
 <script>
-    function a() {
-    window.location.href = "1.html";
+function page1() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
     }
-     function b() {
-    window.location.href = "2.html";
+  };
+  xhttp.open("GET", "1.txt", true);
+  xhttp.send();
+}
+    function page2() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
     }
-     function c() {
-    window.location.href = "3.html";
+  };
+  xhttp.open("GET", "2.txt", true);
+  xhttp.send();
+}
+    function page3() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
     }
-     function d() {
-    window.location.href = "4.html";
+  };
+  xhttp.open("GET", "3.txt", true);
+  xhttp.send();
+}
+    function page4() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
     }
-     function e() {
-    window.location.href = "5.html";
+  };
+  xhttp.open("GET", "4.txt", true);
+  xhttp.send();
+}
+    function page5() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
     }
+  };
+  xhttp.open("GET", "5.txt", true);
+  xhttp.send();
+}
 </script>
 </head>
 <body>
@@ -110,14 +149,14 @@ a:hover {
   </div>
   <div class="wrapper">
    <div id="menubar">
-    <li class="menuitem" onclick="a()">1</li>
-       <li class="menuitem" onclick="b()">2</li>
-       <li class="menuitem" onclick="c()">3</li>
-            <li class="menuitem" onclick="d()">4</li>
-                 <li class="menuitem" onclick="e()">5</li>
+    <li class="menuitem" onclick="page1()">1</li>
+       <li class="menuitem" onclick="page2()">2</li>
+       <li class="menuitem" onclick="page3()">3</li>
+            <li class="menuitem" onclick="page4()">4</li>
+                 <li class="menuitem" onclick="page5()">5</li>
     </div>
     <div id="main">
-      <h1>My favirote food:</h1>
+       <h1>My favirote food:</h1>
 <p>Minecraft</p>
         <p>Pancakes</p>
         <p>Big Mac</p>
